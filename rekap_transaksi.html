@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekap Transaksi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #800000; /* Warna latar belakang */
+            color: #333; /* Warna teks */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff; /* Warna latar belakang kontainer */
+            border-radius: 8px; /* Sudut melengkung */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+        }
+
+        h2 {
+            color: #ff4d4d; /* Warna judul */
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd; /* Garis border untuk tabel */
+            padding: 10px;
+            text-align: left; /* Rata kiri untuk teks */
+        }
+
+        th {
+            background-color: #ff4d4d; /* Warna latar belakang header tabel */
+            color: white; /* Warna teks header tabel */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Warna latar belakang baris genap */
+        }
+
+        tr:hover {
+            background-color: #ddd; /* Efek hover untuk baris tabel */
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            width: 100%;
+            background-color: #ff4d4d; /* Warna tombol */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e63939; /* Warna tombol saat hover */
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h2>Rekap Transaksi Donor</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama Donor</th>
+                <th>Alamat</th>
+                <th>Jenis Kelamin</th>
+                <th>Golongan Darah</th>
+                <th>Nomor Kantong</th>
+                <th>Tanggal Transaksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Ali Budi</td>
+                <td>Jalan Merdeka No. 10</td>
+                <td>Laki-laki</td>
+                <td>A</td>
+                <td>001</td>
+                <td>2024-11-01</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Siti Nuraini</td>
+                <td>Jalan Pahlawan No. 5</td>
+                <td>Perempuan</td>
+                <td>B</td>
+                <td>002</td>
+                <td>2024-11-02</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Rudi Setiawan</td>
+                <td>Jalan Cendana No. 15</td>
+                <td>Laki-laki</td>
+                <td>AB</td>
+                <td>003</td>
+                <td>2024-11-03</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Maria Sari</td>
+                <td>Jalan Kenanga No. 12</td>
+                <td>Perempuan</td>
+                <td>O</td>
+                <td>004</td>
+                <td>2024-11-04</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Andi Saputra</td>
+                <td>Jalan Kembang No. 8</td>
+                <td>Laki-laki</td>
+                <td>A</td>
+                <td>005</td>
+                <td>2024-11-05</td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="back-button" onclick="history.back()">Kembali</button>
+</div>
+
+</body>
+
+</html>
