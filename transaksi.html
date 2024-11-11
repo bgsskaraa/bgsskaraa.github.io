@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelompok1B - SIMPD</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/simdondar_icon.ico">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -120,6 +121,7 @@
             event.preventDefault();
 
             // Store form data in localStorage
+            localStorage.setItem("nomor", 1);
             localStorage.setItem("name", document.getElementById("name").value);
             localStorage.setItem("address", document.getElementById("address").value);
             localStorage.setItem("gender", document.getElementById("gender").value);

@@ -5,22 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelompok1B - SIMPD</title>
     <link rel="stylesheet" href="styleCheck.css"> <!-- Include your CSS file here -->
+    <link rel="icon" type="image/x-icon" href="img/simdondar_icon.ico">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Check Stock</h1>
+            <h1>Check Stok</h1>
         </header>
 
-        <form  class="search-form">
-            <input type="text" name="search" placeholder="Enter product name or ID" required>
+        <form  class="search-form" id="search-form">
+            <input type="text" name="search" placeholder="Masukkan nomor kantong" id="searchNoKantong" required>
             <button type="submit">Search</button>
             <button class="back-button" onclick="window.location.href='dashboard.html'">Kembali</button>
         </form>
+
+        <h2>Rekap Pengambilan Darah</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama </th>
+                <th>Jenis Kelamin</th>
+                <th>Kode Pendonor</th>
+                <th>Golongan Darah</th>
+                <th>Rhesus</th>
+                <th>HB</th>
+                <th>Hasil</th>
+                <th>No Kantong</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="name"></td>
+                <td id="gender"></td>
+                <td id="kodePendonor"></td>
+                <td id="blood_type"></td>
+                <td id="rhesus"></td>
+                <td id="hb"></td>
+                <td id="pengambilan"></td>
+                <td id="noKantong"></td>
+            </tr>
+        </tbody>
+    </table>
 
         <footer>
         <p>&copy; KELOMPOK 1B SIMPD</p>
         </footer>
     </div>
+    <script>
+        document.getElementById("search-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const searchNomorKantong = document.getElementById("searchNoKantong").value;
+            const nomorKantong = localStorage.getItem("noKantong");
+
+            if (searchNomorKantong === nomorKantong) {
+                 // Mendapatkan data dari localStorage dan menampilkannya
+            document.getElementById("name").textContent = localStorage.getItem("name") || "-";
+            document.getElementById("gender").textContent = localStorage.getItem("gender") || "-";
+            document.getElementById("kodePendonor").textContent = localStorage.getItem("kodePendonor") || "-";
+            document.getElementById("blood_type").textContent = localStorage.getItem("blood_type") || "-";
+            document.getElementById("rhesus").textContent = localStorage.getItem("rhesus") || "-";
+            document.getElementById("hb").textContent = localStorage.getItem("hb") || "-";
+            document.getElementById("pengambilan").textContent = localStorage.getItem("pengambilan") || "-";
+            document.getElementById("noKantong").textContent = localStorage.getItem("noKantong") || "-";
+        }else{
+            alert("Nomor kantong tidak ditemukan.");
+        }
+        });
+    </script>
+
 </body>
 </html>

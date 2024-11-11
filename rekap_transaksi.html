@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelompok1B - SIMPD</title>
+    <link rel="icon" type="image/x-icon" href="img/simdondar_icon.ico">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -66,75 +67,62 @@
         button:hover {
             background-color: #e63939; /* Warna tombol saat hover */
         }
+
+        
     </style>
 </head>
 
 <body>
 <div class="container">
-    <h2>Rekap Transaksi Donor</h2>
+    <h2>Rekap Pengambilan Darah</h2>
     <table>
         <thead>
             <tr>
                 <th>No</th>
-                <th>Nama Donor</th>
+                <th>Nama </th>
                 <th>Alamat</th>
                 <th>Jenis Kelamin</th>
+                <th>Kode Pendonor</th>
                 <th>Golongan Darah</th>
-                <th>Nomor Kantong</th>
-                <th>Tanggal Transaksi</th>
+                <th>Rhesus</th>
+                <th>HB</th>
+                <th>Berat badan (cm)</th>
+                <th>Tinggi badan (cm)</th>
+                <th>Hasil</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>1</td>
-                <td>Ali Budi</td>
-                <td>Jalan Merdeka No. 10</td>
-                <td>Laki-laki</td>
-                <td>A</td>
-                <td>001</td>
-                <td>2024-11-01</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Siti Nuraini</td>
-                <td>Jalan Pahlawan No. 5</td>
-                <td>Perempuan</td>
-                <td>B</td>
-                <td>002</td>
-                <td>2024-11-02</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Rudi Setiawan</td>
-                <td>Jalan Cendana No. 15</td>
-                <td>Laki-laki</td>
-                <td>AB</td>
-                <td>003</td>
-                <td>2024-11-03</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Maria Sari</td>
-                <td>Jalan Kenanga No. 12</td>
-                <td>Perempuan</td>
-                <td>O</td>
-                <td>004</td>
-                <td>2024-11-04</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Andi Saputra</td>
-                <td>Jalan Kembang No. 8</td>
-                <td>Laki-laki</td>
-                <td>A</td>
-                <td>005</td>
-                <td>2024-11-05</td>
+                <td id="nomor"></td>
+                <td><a href="/formPengambilanDarah.html" id="name"></a></td>
+                <td id="address"></td>
+                <td id="gender"></td>
+                <td id="kodePendonor"></td>
+                <td id="blood_type"></td>
+                <td id="rhesus"></td>
+                <td id="hb"></td>
+                <td id="weight"></td>
+                <td id="height"></td>
+                <td id="hasil"></td>
             </tr>
         </tbody>
     </table>
-    <button class="back-button" onclick="history.back()">Kembali</button>
+    <button class="back-button" onclick="window.location.href='dashboard.html'">Kembali</button>
 </div>
-
+<script>
+    // Mendapatkan data dari localStorage dan menampilkannya
+    document.getElementById("nomor").textContent = localStorage.getItem("nomor") || "-";
+    document.getElementById("name").textContent = localStorage.getItem("name") || "-";
+    document.getElementById("address").textContent = localStorage.getItem("address") || "-";
+    document.getElementById("gender").textContent = localStorage.getItem("gender") || "-";
+    document.getElementById("kodePendonor").textContent = localStorage.getItem("kodePendonor") || "-";
+    document.getElementById("blood_type").textContent = localStorage.getItem("blood_type") || "-";
+    document.getElementById("rhesus").textContent = localStorage.getItem("rhesus") || "-";
+    document.getElementById("hb").textContent = localStorage.getItem("hb") || "-";
+    document.getElementById("weight").textContent = localStorage.getItem("weight") || "-";
+    document.getElementById("height").textContent = localStorage.getItem("height") || "-";
+    document.getElementById("hasil").textContent = localStorage.getItem("hasil") || "-";
+</script>
 </body>
 
 </html>
