@@ -59,8 +59,13 @@
         <p id="name"></p>
         <p id="address"></p>
         <p id="gender"></p>
-        <p id="noKantong"></p>
+        <p id="kodePendonor"></p>
         <p id="blood_type"></p>
+        <p id="rhesus"></p>
+        <p id="hb"></p>
+        <p id="weight"></p>
+        <p id="height"></p>
+        <p id="hasil"></p>
         <button class="back-button" onclick="window.location.href='dashboard.html'">Kembali</button>
     </div>
 
@@ -69,8 +74,13 @@
         document.getElementById("name").textContent = "Nama: " + localStorage.getItem("name");
         document.getElementById("address").textContent = "Alamat: " + localStorage.getItem("address");
         document.getElementById("gender").textContent = "Jenis Kelamin: " + localStorage.getItem("gender");
-        document.getElementById("noKantong").textContent = "Nomor Kantong: " + localStorage.getItem("noKantong");
+        document.getElementById("kodePendonor").textContent = "Kode Pendonor: " + localStorage.getItem("kodePendonor");
         document.getElementById("blood_type").textContent = "Golongan Darah: " + localStorage.getItem("blood_type");
+        document.getElementById("rhesus").textContent = "Rhesus: " + localStorage.getItem("rhesus");
+        document.getElementById("hb").textContent = "HB: " + localStorage.getItem("hb");
+        document.getElementById("weight").textContent = "Berat Badan (kg): " + localStorage.getItem("weight");
+        document.getElementById("height").textContent = "Tinggi Badan (cm): " + localStorage.getItem("height");
+        document.getElementById("hasil").textContent = "Hasil: " + localStorage.getItem("hasil");
     </script>
 </body>
 
