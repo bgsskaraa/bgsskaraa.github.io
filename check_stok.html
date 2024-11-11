@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelompok1B - SIMPD</title>
-    <link rel="stylesheet" href="styleCheck.css"> <!-- Include your CSS file here -->
+    <link rel="stylesheet" href="styleCheck.css"> 
     <link rel="icon" type="image/x-icon" href="img/simdondar_icon.ico">
 </head>
 <body>
@@ -16,10 +16,10 @@
         <form  class="search-form" id="search-form">
             <input type="text" name="search" placeholder="Masukkan nomor kantong" id="searchNoKantong" required>
             <button type="submit">Search</button>
-            <button class="back-button" onclick="window.location.href='dashboard.html'">Kembali</button>
+            <button type="button" class="back-button" onclick="window.location.href='dashboard.html'">Kembali</button>
         </form>
 
-        <h2>Rekap Pengambilan Darah</h2>
+        <h2>Rekap Stok</h2>
     <table>
         <thead>
             <tr>
@@ -69,6 +69,7 @@
             document.getElementById("hb").textContent = localStorage.getItem("hb") || "-";
             document.getElementById("pengambilan").textContent = localStorage.getItem("pengambilan") || "-";
             document.getElementById("noKantong").textContent = localStorage.getItem("noKantong") || "-";
+            alert("Nomor kantong ditemukan!");
         }else{
             alert("Nomor kantong tidak ditemukan.");
         }

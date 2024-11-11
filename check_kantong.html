@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelompok1B - SIMPD</title>
-    <link rel="stylesheet" href="styleCheck.css"> <!-- Include your CSS file here -->
+    <link rel="stylesheet" href="styleKantong.css"> 
     <link rel="icon" type="image/x-icon" href="img/simdondar_icon.ico">
 </head>
 <body>
@@ -12,16 +12,49 @@
         <header>
             <h1>Check Kantong</h1>
         </header>
-
-        <form  class="search-form">
-            <input type="text" name="search" placeholder="Enter product name or ID" required>
-            <button type="submit">Search</button>
+        <div class="container">
+            <h2>Rekap Pengambilan Darah</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Kode Pendonor</th>
+                        <th>Golongan Darah</th>
+                        <th>Rhesus</th>
+                        <th>HB</th>
+                        <th>No Kantong</th>
+                        <th>pengambilan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="nomor"></td>
+                        <td id="kodePendonor"></td>
+                        <td id="blood_type"></td>
+                        <td id="rhesus"></td>
+                        <td id="hb"></td>
+                        <td id="noKantong"></td>
+                        <td id="pengambilan"></td>
+                    </tr>
+                </tbody>
+            </table>
             <button class="back-button" onclick="window.location.href='dashboard.html'">Kembali</button>
-        </form>
+        </div>
+        <script>
+            // Mendapatkan data dari localStorage dan menampilkannya
+            document.getElementById("nomor").textContent = localStorage.getItem("nomor") || "-";
+            document.getElementById("kodePendonor").textContent = localStorage.getItem("kodePendonor") || "-";
+            document.getElementById("blood_type").textContent = localStorage.getItem("blood_type") || "-";
+            document.getElementById("rhesus").textContent = localStorage.getItem("rhesus") || "-";
+            document.getElementById("hb").textContent = localStorage.getItem("hb") || "-";
+            document.getElementById("pengambilan").textContent = localStorage.getItem("pengambilan") || "-";
+            document.getElementById("noKantong").textContent = localStorage.getItem("noKantong") || "-";
+        </script>
 
         <footer>
         <p>&copy; KELOMPOK 1B SIMPD</p>
         </footer>
+        <!-- kode pendonor, gol darah, resus, hb,nokantong -->
     </div>
 </body>
 </html>

@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header {
+    background-color: #800000; /* Dark red for the header */
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.search-form {
+    margin: 20px 0;
+}
+
+.search-form input {
+    width: 300px; /* Width of the search input */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-form input:focus {
+    border-color: #800000; /* Change border color on focus */
+}
+
+.search-form button {
+    padding: 10px 15px;
+    background-color: #c00; /* Button background color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.search-form button:hover {
+    background-color: #a00; /* Darker red on hover */
+}
+
+h2 {
+    margin: 20px 0;
+    color: #800000; /* Match the header color */
+}
+
+table {
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the table */
+    border-collapse: collapse; /* Remove space between table cells */
+}
+
+table, th, td {
+    border: 1px solid #ccc; /* Light border for table */
+}
+
+th {
+    background-color: #800000; /* Dark red for table header */
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+footer {
+    padding: 10px;
+    background-color: #e0e0e0; /* Light gray for footer */
+    color: #666;
+    font-size: 0.9em;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 35%;
+    background-color: #ff4d4d; /* Warna tombol */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e63939; /* Warna tombol saat hover */
+}
+
