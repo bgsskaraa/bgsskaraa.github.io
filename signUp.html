@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
     <title>Kelompok1B - SIMPD</title>
     <link rel="stylesheet" href="stylesindex.css" />
+=======
+    <title>Simdonor - Blood Donation</title>
+    <link rel="stylesheet" href="stylesSignUp.css" />
+>>>>>>> 427dfc89d01964179a5e26ad5e0fc84bce7b905a
   </head>
 
   <body>
@@ -34,16 +39,16 @@
 
       <section class="form-section">
         <h3>Sign Up</h3>
-        <form id="loginForm">
+        <form id="signUpForm">
           <label for="username">Username:</label>
           <input type="text" id="username" name="username" required />
 
           <label for="password">Password:</label>
           <input type="password" id="password" name="password" required />
-          
+
           <label for="passwordConfirm">Confirmation Password:</label>
           <input
-            type="passwordConfirm"
+            type="password"
             id="passwordConfirm"
             name="passwordConfirm"
             required
@@ -69,34 +74,58 @@
       </footer>
     </div>
 
-    <script>
+    <!-- <script>
       document
-        .getElementById("loginForm")
+        .getElementById("signUpForm")
         .addEventListener("submit", function (event) {
           event.preventDefault(); // Prevent form submission
 
-          // Hard-coded credentials for demo
-          const validUsername = "kelompok1";
-          const validPassword = "jaya123";
-
-          // Get the username and password from the form
           const username = document.getElementById("username").value;
           const password = document.getElementById("password").value;
+          const passwordConfirm =
+            document.getElementById("passwordConfirm").value;
 
-          // Check if the username and password are correct
-          if (username === validUsername && password === validPassword) {
-            // Store session data
-            localStorage.setItem("username", username);
-            alert("Login Berhasil.");
+          //mengecek apakah password yang dimasukkan sama
+          if (password === passwordConfirm) {
+            alert("Akun anda berhasil dibuat \nsilahkan login kembali!");
 
-            // Redirect to a protected page (e.g., dashboard.html)
-            window.location.href = "dashboard.html";
+            localStorage.setItem("newUsername", newUsername);
+            localStorage.setItem("newPassword", newPassword);
+
+            window.location.href = "index.html";
           } else {
-            // If login fails, show an error message
-            alert("Username atau password salah.");
-            document.getElementById("loginForm").reset(); // Reset the form
+            alert("Password yang anda masukkan tidak sama");
+            document.getElementById("passwordConfirm").reset();
+          }
+        });
+    </script> -->
+
+    <script>
+      document
+        .getElementById("signUpForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Mencegah form dari submit
+
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+          const passwordConfirm = document.getElementById("passwordConfirm").value;
+
+          // Memastikan password cocok
+          if (password === passwordConfirm) {
+            alert("Akun anda berhasil dibuat \nsilahkan login kembali!");
+
+            // Menyimpan data username dan password di localStorage
+            localStorage.setItem("newUsername", username);
+            localStorage.setItem("newPassword", password);
+
+            // Redirect ke halaman index.html
+            window.location.href = "index.html";
+          } else {
+            alert("Password yang anda masukkan tidak sama");
+            document.getElementById("passwordConfirm").value = "";
           }
         });
     </script>
+
   </body>
 </html>
