@@ -94,7 +94,7 @@
         <tbody>
             <tr>
                 <td id="nomor"></td>
-                <td><a href="/formPengambilanDarah.html" id="name"></a></td>
+                <td id="name"></td>
                 <td id="address"></td>
                 <td id="gender"></td>
                 <td id="kodePendonor"></td>
@@ -112,7 +112,7 @@
 <script>
     // Mendapatkan data dari localStorage dan menampilkannya
     document.getElementById("nomor").textContent = localStorage.getItem("nomor") || "-";
-    document.getElementById("name").textContent = localStorage.getItem("name") || "-";
+    document.getElementById("name").innerHTML = localStorage.getItem("name")? `<a href="/formPengambilanDarah.html">${localStorage.getItem("name")}</a>` : "-";
     document.getElementById("address").textContent = localStorage.getItem("address") || "-";
     document.getElementById("gender").textContent = localStorage.getItem("gender") || "-";
     document.getElementById("kodePendonor").textContent = localStorage.getItem("kodePendonor") || "-";
